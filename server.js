@@ -17,8 +17,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/sendmessage', async (req, res) => {
   const message = (req.query.message) ? req.query.message : 'No Message Found';
   store.storeMessage(message,'non mqtt');
+  const response = {
+    status:0,
+    message:message,
+    timestamp:new Date().getTime()
+  };
   mqttClient.sendMessage(req.query.message);
-  res.send(message);
+  res.send(response);
 });
 
 // get outgoing message API
