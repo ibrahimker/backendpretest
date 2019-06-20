@@ -1,0 +1,51 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Warung Pintar Backend Pretest",
+		"_postman_id": "87a389ad-b1a3-7508-8eac-f338de918bc1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Message",
+			"request": {
+				"url": "localhost:3000/getmessage",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/sendmessage?message='Hello World'",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sendmessage"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "'Hello World'",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
